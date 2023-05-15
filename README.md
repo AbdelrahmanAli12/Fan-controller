@@ -42,13 +42,6 @@ The fan control system is implemented using the AVR C programming language. The 
 - motor.h and motor.c : Header and source files for motor control functions.
 - lm35_sensor.h and lm35_sensor.c : Header and source files for the sensor temperature reading function.
 - ![layers](assets/layers.PNG)
-## Build Instructions
-1. Set up an AVR development environment (e.g., AVR-GCC and AVRDUDE) on your computer.
-2. Connect the AVR ATmega32 microcontroller to the development board or programmer.
-3. Clone or download the project source code to your computer.
-4. Open the project in your chosen AVR development environment.
-5. Build the project to generate the binary file (.hex) using the provided build or compile options.
-6. Program the ATmega32 microcontroller with the generated .hex file using AVRDUDE or a suitable programmer.
 
 ## Usage
 1. Power up the Fan Controller System.
