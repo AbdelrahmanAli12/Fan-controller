@@ -11,6 +11,9 @@ This readme file provides an overview and instructions for the Fan Controller Sy
 ## Functionality Overview
 The Fan Controller System continuously monitors the temperature using the LM35 sensor and adjusts the fan speed accordingly. The system displays the motor status (on/off) and the current temperature on the LCD.
 
+## Simualtion
+- Open the simulation file and run it
+
 ## Hardware Connections
 1. Connect the LM35 temperature sensor to ADC channel 2 of the ATmega32 microcontroller.
 2. Connect the LCD to the appropriate pins of the microcontroller to enable communication.
@@ -38,7 +41,7 @@ The fan control system is implemented using the AVR C programming language. The 
 - pwm.h and pwm.c: Header and source files for Timer0 configuration.
 - motor.h and motor.c : Header and source files for motor control functions.
 - lm35_sensor.h and lm35_sensor.c : Header and source files for the sensor temperature reading function.
-- []()
+- ![layers](assets/layers.PNG)
 ## Build Instructions
 1. Set up an AVR development environment (e.g., AVR-GCC and AVRDUDE) on your computer.
 2. Connect the AVR ATmega32 microcontroller to the development board or programmer.
@@ -53,6 +56,5 @@ The fan control system is implemented using the AVR C programming language. The 
 3. The motor speed will adjust automatically based on the temperature readings from the LM35 sensor.
 4. Monitor the LCD for the current motor status and temperature information.
 
-## Limitations
-- The project assumes a single LM35 temperature sensor connected to ADC channel 2. If you have different hardware configurations, adjust the code accordingly.
-- The project controls the motor speed using Timer0 in Fast PWM mode. If you need more precise control or additional
+
+
