@@ -1,0 +1,17 @@
+/*
+ * fanContorller.c
+ *
+ *  Created on: 9 May 2023
+ *      Author: Abdelrahman Ali
+ */
+
+#include "lm35_sensor.h"
+#include "lcd.h"
+#include "DCmotor.h"
+
+int main(void) {
+	ADC_ConfigType myConfig = { INTERNAL256, FCPU8 };
+	ADC_init(&myConfig);
+
+	return 0;
+}

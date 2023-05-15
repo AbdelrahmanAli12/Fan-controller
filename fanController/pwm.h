@@ -1,0 +1,16 @@
+/*
+ * pwm.h
+ *
+ *  Created on: 9 May 2023
+ *      Author:  Abdelrahman Ali
+ */
+#include "stdio.h"
+#include "std_types.h"
+
+
+#ifndef PWM_H_
+#define PWM_H_
+
+void Timer0_Fast_PWM_Init(uint16 duty_cycle);
+
+#endif

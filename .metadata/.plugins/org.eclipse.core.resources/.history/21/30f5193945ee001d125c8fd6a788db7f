@@ -1,0 +1,18 @@
+/*
+ * DCmotor.h
+ *
+ *  Created on: 9 May 2023
+ *      Author: Bido_
+ */
+#include<stdio.h>
+#include "std_types.h"
+enum state {CW , ACW , stop};
+
+#ifndef DCMOTOR_H_
+#define DCMOTOR_H_
+
+
+void Timer0_Fast_PWM_Init(unsigned short duty_cycle);
+void DcMotor_Rotate (DcMotor_State state,uint8 speed);
+
+#endif /* DCMOTOR_H_ */

@@ -1,0 +1,39 @@
+18:49:39 **** Incremental Build of configuration Debug for project fanController ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building file: ../pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"pwm.d" -MT"pwm.o" -c -o "pwm.o" "../pwm.c"
+Finished building: ../pwm.c
+ 
+Building target: fanController.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,fanController.map -mmcu=atmega32 -o "fanController.elf"  ./DCmotor.o ./adc.o ./fanContorller.o ./gpio.o ./lcd.o ./lm35_sensor.o ./pwm.o   
+Finished building target: fanController.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S fanController.elf  >"fanController.lss"
+Finished building: fanController.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 fanController.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9818 bytes (30.0% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+18:49:39 Build Finished. 0 errors, 0 warnings. (took 677ms)
+

@@ -1,0 +1,44 @@
+/*
+ * fanContorller.c
+ *
+ *  Created on: 9 May 2023
+ *      Author: Abdelrahman Ali
+ */
+
+#include "lm35_sensor.h"
+#include "lcd.h"
+#include "DCmotor.h"
+
+int main(void) {
+	DcMotor_Init();
+	ADC_ConfigType myConfig = { INTERNAL256, FCPU8 };
+	ADC_init(&myConfig);
+	LCD_init();
+	LCD_displayString("FAN IS  ");
+	LCD_moveCursor(2,0);
+	LCD_displayString("Temp =    C");
+	uint8 temp;
+	while (1) {
+		LCD_moveCursor(2, 7);
+		LCD_intgerToString(temp);
+		temp = LM35_getTemperature();
+		LCD_moveCursor(0,7);
+		if (temp < 30) {
+			DcMotor_Rotate(stop, 0);
+			LCD_displayString("OFF");
+		} else if (temp >= 30 && temp < 60) {
+			DcMotor_Rotate(CW, 25);
+			LCD_displayString("ON");
+		} else if (temp >= 60 && temp < 90) {
+			DcMotor_Rotate(CW, 50);
+			LCD_displayString("ON");
+		} else if (temp >= 90 && temp < 120) {
+			DcMotor_Rotate(CW, 75);
+			LCD_displayString("ON");
+		} else if (temp >= 120) {
+			DcMotor_Rotate(CW, 100);
+			LCD_displayString("ON");
+		}
+	}
+	return 0;
+}

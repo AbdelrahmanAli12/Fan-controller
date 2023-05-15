@@ -1,0 +1,21 @@
+/*
+ * DCmotor.c
+ *
+ *  Created on: 9 May 2023
+ *      Author: Bido_
+ */
+
+
+#include "DCmotor.h"
+#include "gpio.h"
+void DcMotor_Init(void){
+
+}
+
+
+void DcMotor_Rotate(enum DcMotor_State state,uint8 speed){
+
+
+
+	Timer0_Fast_PWM_Init(speed);
+}
