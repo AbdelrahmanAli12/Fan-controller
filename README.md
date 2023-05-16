@@ -1,4 +1,4 @@
-# Fan Controller System Readme
+# Fan Controller System
 
 This readme file provides an overview and instructions for the Fan Controller System project, which uses an AVR ATmega32 microcontroller. The system controls a fan (represented as a motor) based on temperature readings from an LM35 temperature sensor. An LCD is used to display the motor status and current temperature. The motor speed is controlled using Fast PWM mode of Timer0, and the power applied to the motor varies according to the temperature.
 
